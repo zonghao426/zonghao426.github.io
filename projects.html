@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projects by Your Name.">
+  <title>Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <span class="accent">[Projects]</span>
+      <nav aria-label="Primary navigation">
+        <a href="index.html">About</a>
+        <a class="active" href="projects.html" aria-current="page">Projects</a>
+        <a href="cv.pdf">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-heading">
+      <h1>My Projects</h1>
+    </section>
+
+    <section class="project-list" aria-label="Project list">
+      <article class="project">
+        <div class="project-heading">
+          <h2>Type System Mechanization for λ⋔: a Choregraphic Language with Process Forking</h2>
+          <!-- <span class="status status-active">Completed</span> -->
+        </div>
+        <p class="project-meta">
+          <strong>Advisor:</strong> <a href="https://cecchetti.sites.cs.wisc.edu/research.html">Ethan Cecchetti</a>
+        </p>
+        <p>
+          Choreographic programming is an approach to distributed systems programming that guarantees deadlock-freedom by programming from a global perspective rather than programming each participant separately. Under <a href="https://ashlleysam.github.io/">Ashley</a>'s guidance, I contributed to her research on extending Choreographic Programming with features as first class locations, process forking, etc. 
+          <br>
+          My contribution focuses on algorithmic typing. I formalized an example local language with a type-and-effect system, and parameterized the Choreography over its abstract interface. I designed bidirectional checking/inference algorithms at both levels and proved its soundness and completeness in Rocq. The formalization includes subtyping, effect judgments, and multiple levels of sorts. 
+          In particular, my work is the first to establish typing decidiblity of this class of System-F like Choregraphic Languages.
+        </p>
+      </article>
+
+      <article class="project">
+        <div class="project-heading">
+          <h2>Abstract Effect Inference for Higher-Order Recursive Programs</h2>
+          <!-- <span class="status status-active">Active</span> -->
+        </div>
+        <p class="project-meta">
+          <strong>Advisor:</strong> <a href="https://cecchetti.sites.cs.wisc.edu/research.html">Ethan Cecchetti</a>
+        </p>
+        <p>
+          Effect systems statically approximate the computational behavior of programs, but designing inference algorithms for each new effect systems can be brittle and time consuming. I investigated the possibility of designing a generic effect inference algorithm that supports a variety of effect systems. In particular, I considered what algebraic structure and computational operations an effect system must provide to support a generic inference algorithm for higher-order recursive programs. Then I designed an effect inference algorithm that is parameterized over any effect systems that admits the algebraic structure. I mechanized the framework in Rocq and proved soundness, completeness, and bounds on the unresolved effects.
+        </p>
+      </article>
+
+      <article class="project">
+        <div class="project-heading">
+          <h2>Refinement Language Design for Non-Interactive Zero Knowledge Proofs</h2>
+          <!-- <span class="status status-active">Active</span> -->
+        </div>
+        <p class="project-meta">
+          <strong>Advisor:</strong> <a href="https://cecchetti.sites.cs.wisc.edu/research.html">Ethan Cecchetti</a>
+        </p>
+        <p>
+          Non-Interactive Zero Knowledge Proofs (NIZKPs) is a cryptographic technique that allows a prover to demonstrate certain properties about the values the prover holds without revealing other information and without real-time interaction between the prover and the verifier. Refinement types are ordinary types further constrained by a logical property (such as {x: Int | x is even} representing the type of integers which are even). This project is a part of a <a href="https://pages.cs.wisc.edu/~rahulk/">Rahul</a>'s broader work on integrating NIZKPs (which allows us to demonstrate properties) and refinement types (which allows properties to exist as a part of the type system). In particular, I'm focusing on extending ideas from Liquid Types to support useful specifications about NIZKPs while preserving decidable refinement checking.
+        </p>
+      </article>
+
+      <article class="project">
+        <div class="project-heading">
+          <h2>Isabelle Formalization of "<a href="https://dl.acm.org/doi/10.1145/3632909">Ill-Typed Programs Don’t Evaluate</a>"</h2>
+          <!-- <span class="status status-paused">Paused</span> -->
+        </div>
+        <p class="project-meta">
+          <strong>Advisor:</strong> <a href="https://traytel.bitbucket.io/">Dmitriy Traytel</a>
+        </p>
+        <p>
+          Incorrectness typing provides a way to reason what a program cannot type as, in addition to only what it can type as. I mechanized the first main theorem of a paper on incorrectness typing in Isabelle/HOL. Much of the work involved reconstructing informal arguments, resolving inconsistent notation, and identifying missing assumptions in intermediate lemmas. The resulting formalization establishes the theorem with machine-checked proofs.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/zonghao426/two-sided-typing-isabelle">Source code</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-heading">
+          <h2>Tensor-decomposition based Simulation of Grover's Algorithm</h2>
+          <!-- <span class="status status-complete">Completed</span> -->
+        </div>
+        <p class="project-meta">
+          <strong>Advisor:</strong> <a href="https://hjemmesider.diku.dk/~henglein/">Fritz Henglein</a>, <a href="https://research.ku.dk/search/result/profile/?id=180093">James Avery</a>
+        </p>
+        <p>
+        As a part of a final project for the a course, we explored classical simulation of Grover's quantum search algorithm using compact tensor representations of quantum states. We represented large tensors by decomposing them into sums of products of smaller tensors and studied how their representation complexity changes under rewriting. I proved that, for boolean satisfiability problems expressed in algebraic normal form, the representation complexity cannot increase after the first Grover iteration under our rewriting system. I also characterized the possible growth in the first iteration using the union closure of the boolean formula's terms and collaborated on a Haskell implementation of the simulator.
+        <div class="project-links">
+          <a href="https://github.com/zonghao426/atpl25-SATsolver">Source code</a>
+          <a href="ATPL_Final_Paper.pdf">Write-up</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-heading">
+          <h2>Optimizing Fixed Direction Sets for Unit Distance Graph Construction</h2>
+        </div>
+        <p class="project-meta">
+          <strong>Advisor:</strong> <a href="https://www.renyi.hu/munkatarsak/zsamboki-pal">Pál Zsámbok</a>
+        </p>
+        <p>
+        Unit-distance graphs connect pairs of points in the plane that are exactly one unit apart. I explored optimization-based machine-learning methods for finding dense unit-distance graphs. I observed that conventional loss functions that aggregates distance-error objectives using L<sub>1</sub> or L<sub>2</sub> norms often concentrated optimization on a small number of edges. To correct for that, I experimented with L<sub>p</sub> (quasi)norms with p &lt; 1 to encourage the formation of multiple edges.
+        <div class="project-links">
+          <a href="https://github.com/zonghao426/atpl25-SATsolver">Source code</a>
+          <a href="https://meetings.ams.org/math/jmm2025/meetingapp.cgi/Paper/42887">Abstract</a>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+</body>
+
+</html>
